@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maria Camila Correa</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      line-height: 1.6;
+      color: #111;
+      background: #fff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+    .site-header {
+      border-bottom: none;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .site-header nav {
+      display: flex;
+      gap: 22px;
+      padding: 12px 0;
+      justify-content: center;
+    }
+    .site-header nav a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+      font-size: 20px;
+    }
+    .site-header nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+      padding: 40px 0;
+    }
+    .hero-text {
+      flex: 1 1 400px;
+    }
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 68px);
+      margin: 0 0 8px;
+    }
+    .hero h3 {
+      margin: 0 0 20px;
+      font-size: 22px;
+      color: #555;
+    }
+    .hero p {
+      margin: 0 0 12px;
+    }
+    .hero img {
+      flex: 1 1 280px;
+      max-width: 360px;
+      border-radius: 8px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 40px 0;
+    }
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 6px;
+    }
+
+    /* CAROUSEL */
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+      margin-top: 16px;
+    }
+    .carousel {
+      display: flex;
+      gap: 16px;
+      scroll-behavior: smooth;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .carousel::-webkit-scrollbar { display: none; }
+    .carousel-item {
+      flex: 0 0 auto;
+      width: 225px;
+      text-align: center;
+    }
+    .carousel-item img {
+      width: 100%;
+      height: 337px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .carousel-item p {
+      margin: 6px 0 0;
+      font-size: 14px;
+      color: #333;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.8);
+      border: none;
+      font-size: 32px;
+      cursor: pointer;
+      padding: 4px 10px;
+      border-radius: 4px;
+      z-index: 5;
+    }
+    .carousel-btn.left { left: 4px; }
+    .carousel-btn.right { right: 4px; }
+
+    /* CONTACT */
+    #contact a {
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #eee;
+      text-align: center;
+      padding: 18px 0;
+      font-size: 16px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav>
+    <a href="#bio">BIO</a>
+    <a href="#editor">EDITOR</a>
+    <a href="#translator">TRANSLATOR</a>
+    <a href="#author">AUTHOR</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO / BIO -->
+  <section id="bio" class="container hero">
+    <div class="hero-text">
+      <h1>Maria Camila Correa</h1>
+      <h3>Editor, Translator, Author</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed lacus eget mauris cursus egestas. Vivamus elementum est vel sapien dignissim, ac convallis nulla gravida.</p>
+      <p>Aliquam erat volutpat. Proin sed magna in sem dictum laoreet. Integer ut mi nec leo interdum consequat quis ac risus.</p>
+    </div>
+    <img src="portrait.jpg" alt="Maria Camila Correa">
+  </section>
+
+  <div class="container">
+    <p><em>Below is a sample of the books I have edited, translated and written...</em></p>
+  </div>
+
+  <!-- EDITOR -->
+  <section id="editor" class="container">
+    <h2>Editor</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left">&#10094;</button>
+      <div class="carousel">
+        <div class="carousel-item"><img src="covers/editor1.jpg" alt="Book"><p><em>Title One</em></p></div>
+        <div class="carousel-item"><img src="covers/editor2.jpg" alt="Book"><p><em>Title Two</em></p></div>
+      </div>
+      <button class="carousel-btn right">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- TRANSLATOR -->
+  <section id="translator" class="container">
+    <h2>Translator</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left">&#10094;</button>
+      <div class="carousel">
+        <div class="carousel-item"><img src="covers/translator1.jpg" alt="Book"><p><em>Title One</em></p></div>
+        <div class="carousel-item"><img src="covers/translator2.jpg" alt="Book"><p><em>Title Two</em></p></div>
+      </div>
+      <button class="carousel-btn right">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- AUTHOR -->
+  <section id="author" class="container">
+    <h2>Author</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left">&#10094;</button>
+      <div class="carousel">
+        <div class="carousel-item"><img src="covers/author1.jpg" alt="Book"><p><em>Title One</em></p></div>
+        <div class="carousel-item"><img src="covers/author2.jpg" alt="Book"><p><em>Title Two</em></p></div>
+      </div>
+      <button class="carousel-btn right">&#10095;</button>
+    </div>
+  </section>
+
+  <div class="container">
+    <p><em>I hope you stay in touch.</em></p>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container">
+    <h2>Contact Me</h2>
+    <p><a href="mailto:maria@example.com">maria@example.com</a></p>
+    <p><a href="https://www.linkedin.com/in/example" target="_blank">LinkedIn</a></p>
+    <p><a href="https://www.instagram.com/example" target="_blank">Instagram</a></p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Maria Camila Correa</p>
+</footer>
+
+<script>
+document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+  const carousel = wrapper.querySelector('.carousel');
+  const leftBtn = wrapper.querySelector('.carousel-btn.left');
+  const rightBtn = wrapper.querySelector('.carousel-btn.right');
+
+  function scrollAmount() {
+    return carousel.querySelector('.carousel-item').offsetWidth + 16;
+  }
+
+  leftBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+  });
+  rightBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>
