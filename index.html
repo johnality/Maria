@@ -4,185 +4,301 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maria Camila Correa</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Lexend', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #e6f0fa; /* pastel blue */
-      color: #333;
+      font-family: 'Lexend', sans-serif;
+      line-height: 1.6;
+      color: #111;
+      background: #eaf6fb; /* pastel blue */
     }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* HEADER */
     .site-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      background: #fff;
+      border-bottom: none;
+      background: #eaf6fb;
       position: sticky;
       top: 0;
-      border-bottom: 2px solid #ddd;
       z-index: 1000;
     }
-    .site-header h1 {
-      margin: 0;
-      font-size: 36px;
-      font-weight: 700;
+    .site-header nav {
+      display: flex;
+      gap: 22px;
+      padding: 12px 0;
+      justify-content: center;
     }
     .site-header nav a {
-      margin-left: 25px;
       text-decoration: none;
       color: #000;
       font-weight: 600;
       font-size: 20px;
-      border-bottom: 3px solid transparent; /* thicker underline baseline */
-      padding-bottom: 5px;
+      border-bottom: 3px solid hotpink; /* always visible pink underline */
+      padding-bottom: 4px;
     }
     .site-header nav a:hover {
-      border-bottom: 3px solid #ff5da2; /* thicker pink underline */
+      border-bottom: 3px solid #000; /* darker on hover */
     }
-    .container {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .intro {
+
+    /* HERO */
+    .hero-heading {
       text-align: center;
+      padding: 40px 0 10px;
     }
-    .intro h2 {
-      font-weight: 400;
-      font-size: 30px; /* 50% larger */
-      margin-top: 10px;
-      color: #555;
+    .hero-heading h1 {
+      font-size: clamp(48px, 7vw, 72px);
+      margin: 0;
     }
-    .bio {
-      margin-top: 25px;
-      font-size: 15px; /* ~75% of previous 20px */
-      line-height: 1.6;
-      text-align: justify;
+    .hero-heading h3 {
+      margin: 10px 0 0;
+      font-size: 22px;
+      color: #444;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start; /* anchor bio text to top of image */
+      gap: 24px;
+      padding: 30px 0;
+    }
+    .hero-text {
+      flex: 1 1 400px;
+    }
+    .hero-text p {
+      margin: 0 0 12px;
+      font-size: 2em; /* double size */
+    }
+    .hero img {
+      flex: 1 1 280px;
+      max-width: 360px;
+      border-radius: 8px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 40px 0;
+    }
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 6px;
+    }
+
+    /* CAROUSEL */
+    .carousel-wrapper {
+      position: relative;
+      overflow: hidden;
+      margin-top: 16px;
     }
     .carousel {
       display: flex;
-      overflow-x: auto;
-      gap: 20px;
-      padding: 20px 0;
+      gap: 16px;
       scroll-behavior: smooth;
+      overflow-x: auto;
+      scrollbar-width: none;
     }
-    .carousel::-webkit-scrollbar {
-      display: none;
-    }
+    .carousel::-webkit-scrollbar { display: none; }
     .carousel-item {
       flex: 0 0 auto;
       text-align: center;
     }
     .carousel-item img {
-      height: 337px;
-      width: auto;
-      max-width: 225px;
+      height: 337px;       /* consistent height */
+      width: auto;         /* keep original aspect ratio */
       border-radius: 6px;
       display: block;
       margin: 0 auto;
     }
     .carousel-item p {
-      margin-top: 10px;
-      font-size: 16px;
+      margin: 6px 0 0;
+      font-size: 14px;
+      color: #333;
     }
-    .contact-message {
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.8);
+      border: none;
+      font-size: 32px;
+      cursor: pointer;
+      padding: 4px 10px;
+      border-radius: 4px;
+      z-index: 5;
+    }
+    .carousel-btn.left { left: 4px; }
+    .carousel-btn.right { right: 4px; }
+
+    /* CONTACT */
+    #contact h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
       text-align: center;
-      font-size: 28px; /* doubled */
-      font-weight: 600;
-      margin: 60px 0 20px;
     }
     .contact-links {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 22px;
-      max-width: 350px;
+      align-items: flex-start;
+      gap: 18px;
+      max-width: 300px;
       margin: 0 auto;
     }
     .contact-item {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 12px;
     }
     .contact-item img {
-      width: 42px;  /* 50% bigger */
-      height: 42px;
+      width: 28px;
+      height: 28px;
       object-fit: contain;
     }
     .contact-item a {
       color: #000;
       text-decoration: none;
       font-weight: 500;
-      font-size: 22px; /* 50% bigger */
     }
     .contact-item a:hover {
       text-decoration: underline;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #ccc;
+      text-align: center;
+      padding: 18px 0;
+      font-size: 16px;
+      color: #555;
     }
   </style>
 </head>
 <body>
 
-  <header class="site-header">
-    <h1>Maria Camila Correa</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#books">Books</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header class="site-header">
+  <nav>
+    <a href="#bio">BIO</a>
+    <a href="#editor">EDITOR</a>
+    <a href="#translator">TRANSLATOR</a>
+    <a href="#author">AUTHOR</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
 
-  <section id="about" class="container intro">
-    <h2>Editor. Translator. Author.</h2>
-    <p class="bio">
-      Maria Camila Correa is a Colombian editor, translator, and author. She has worked extensively across
-      publishing, helping bring stories to life in both Spanish and English. Her work spans children’s literature,
-      fiction, and non-fiction, always with an emphasis on clarity, creativity, and cultural resonance.
-    </p>
+<main>
+  <!-- HERO HEADING -->
+  <div class="hero-heading container">
+    <h1>Maria Camila Correa</h1>
+    <h3>Editor. Translator. Author.</h3>
+  </div>
+
+  <!-- BIO -->
+  <section id="bio" class="container hero">
+    <div class="hero-text">
+      <p>Hi. I'm a picture book editor, translator, and author. Originally from Medellín, Colombia, I currently live in New York City with my sexy husband. I enjoy exploring the city through my camera lens.</p>
+      <p><em>Below is a sample of the books I have edited, translated and written...</em></p>
+    </div>
+    <img src="images/portrait.jpg" alt="Maria Camila Correa">
   </section>
 
-  <section id="books" class="container">
-    <h2>Books</h2>
-    <div class="carousel">
-      <div class="carousel-item">
-        <a href="https://example.com/noah" target="_blank">
-          <img src="images/noah.jpg" alt="Noah's Noisy Night">
-        </a>
-        <p><em>Noah's Noisy Night</em></p>
+  <!-- EDITOR -->
+  <section id="editor" class="container">
+    <h2>Editor</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left">&#10094;</button>
+      <div class="carousel">
+        <div class="carousel-item"><img src="images/tigers.jpg" alt="Don't Think of Tigers"><p><em>Don't Think of Tigers</em></p></div>
+        <div class="carousel-item"><img src="images/grinch.jpg" alt="How the Grinch Lost Christmas"><p><em>How the Grinch Lost Christmas</em></p></div>
+        <div class="carousel-item"><img src="images/super.jpg" alt="Spanish Is My Superpower"><p><em>Spanish Is My Superpower</em></p></div>
       </div>
-      <div class="carousel-item">
-        <a href="https://example.com/fish" target="_blank">
-          <img src="images/fish.jpg" alt="The Fish and the Mountain">
-        </a>
-        <p><em>The Fish and the Mountain</em></p>
-      </div>
-      <div class="carousel-item">
-        <a href="https://example.com/flower" target="_blank">
-          <img src="images/flower.jpg" alt="The Flower Hunter">
-        </a>
-        <p><em>The Flower Hunter</em></p>
-      </div>
+      <button class="carousel-btn right">&#10095;</button>
     </div>
   </section>
 
+  <!-- TRANSLATOR -->
+  <section id="translator" class="container">
+    <h2>Translator</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left">&#10094;</button>
+      <div class="carousel">
+        <div class="carousel-item"><img src="images/hermano.jpg" alt="Mi hermano está lejos"><p><em>Mi hermano está lejos</em></p></div>
+        <div class="carousel-item"><img src="images/taylor.jpg" alt="Little Golden Book: Taylor Swift"><p><em>Little Golden Book: Taylor Swift</em></p></div>
+      </div>
+      <button class="carousel-btn right">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- AUTHOR -->
+  <section id="author" class="container">
+    <h2>Author</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left">&#10094;</button>
+      <div class="carousel">
+        <div class="carousel-item"><img src="images/fox.jpg" alt="Follow Me Little Fox"><p><em>Follow Me Little Fox</em></p></div>
+        <div class="carousel-item"><img src="images/noah.jpg" alt="Noah's Noisy Night"><p><em>Noah's Noisy Night</em></p></div>
+        <div class="carousel-item"><img src="images/selena.jpg" alt="Little Golden Book: Selena"><p><em>Little Golden Book: Selena</em></p></div>
+        <div class="carousel-item"><img src="images/rita.jpg" alt="Little Golden Book: Rita Moreno"><p><em>Little Golden Book: Rita Moreno</em></p></div>
+        <div class="carousel-item"><img src="images/bobross.jpg" alt="Little Golden Book: Bob Ross"><p><em>Little Golden Book: Bob Ross</em></p></div>
+      </div>
+      <button class="carousel-btn right">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- STAY IN TOUCH -->
+  <div class="container" style="text-align:center; margin:60px 0 10px;">
+    <p><em>I would love to hear from you.</em></p>
+  </div>
+
+  <!-- CONTACT -->
   <section id="contact" class="container">
-    <div class="contact-message">I would love to hear from you.</div>
+    <h2>Contact Me</h2>
     <div class="contact-links">
       <div class="contact-item">
         <img src="images/email.png" alt="Email">
-        <a href="mailto:maria@example.com">maria@example.com</a>
+        <a href="mailto:mccorrea92@gmail.com">mccorrea92@gmail.com</a>
       </div>
       <div class="contact-item">
         <img src="images/linkedin.png" alt="LinkedIn">
-        <a href="https://www.linkedin.com/in/example" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/maria-camila-correa-6024813a/" target="_blank">maria-camila-correa-6024813a</a>
       </div>
       <div class="contact-item">
         <img src="images/instagram.png" alt="Instagram">
-        <a href="https://www.instagram.com/example" target="_blank">Instagram</a>
+        <a href="https://www.instagram.com/mccorrea64" target="_blank">@mccorrea64</a>
       </div>
     </div>
   </section>
+</main>
+
+<footer>
+  <p>© 2025 Maria Camila Correa</p>
+</footer>
+
+<script>
+document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+  const carousel = wrapper.querySelector('.carousel');
+  const leftBtn = wrapper.querySelector('.carousel-btn.left');
+  const rightBtn = wrapper.querySelector('.carousel-btn.right');
+
+  function scrollAmount() {
+    return carousel.querySelector('.carousel-item').offsetWidth + 16;
+  }
+
+  leftBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+  });
+  rightBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+  });
+});
+</script>
 
 </body>
 </html>
