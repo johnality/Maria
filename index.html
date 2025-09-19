@@ -40,11 +40,22 @@
       color: #000;
       font-weight: 600;
       font-size: 20px;
-      border-bottom: 3px solid hotpink; /* always visible pink underline */
-      padding-bottom: 4px;
+      position: relative;
+      padding-bottom: 6px;
     }
-    .site-header nav a:hover {
-      border-bottom: 3px solid #000; /* darker on hover */
+    .site-header nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 6px;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 3 Q 10 0, 20 3 T 40 3 T 60 3' stroke='hotpink' stroke-width='3' fill='transparent'/%3E%3C/svg%3E") repeat-x;
+      background-size: 60px 6px;
+    }
+    .site-header nav a:hover::after {
+      background: url("data:image/svg+xml,%3Csvg width='60' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 3 Q 10 0, 20 3 T 40 3 T 60 3' stroke='black' stroke-width='3' fill='transparent'/%3E%3C/svg%3E") repeat-x;
+      background-size: 60px 6px;
     }
 
     /* HERO */
@@ -74,7 +85,7 @@
     }
     .hero-text p {
       margin: 0 0 12px;
-      font-size: 2em; /* double size */
+      font-size: 1.5em; /* was 2em → reduced to 75% */
     }
     .hero img {
       flex: 1 1 280px;
@@ -155,11 +166,12 @@
     .contact-item {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 18px; /* bigger gap */
+      font-size: 1.5em; /* increase text size by 50% */
     }
     .contact-item img {
-      width: 28px;
-      height: 28px;
+      width: 42px; /* was 28px → 50% larger */
+      height: 42px;
       object-fit: contain;
     }
     .contact-item a {
@@ -254,7 +266,7 @@
 
   <!-- STAY IN TOUCH -->
   <div class="container" style="text-align:center; margin:60px 0 10px;">
-    <p><em>I would love to hear from you.</em></p>
+    <p style="text-align:center;"><em>I would love to hear from you.</em></p>
   </div>
 
   <!-- CONTACT -->
