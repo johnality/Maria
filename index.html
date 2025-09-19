@@ -73,25 +73,23 @@
       color: #444;
     }
 
- .hero {
+.hero {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start; /* bio anchored to top of image */
+  flex-wrap: nowrap; /* prevent image dropping below */
+  align-items: flex-start; 
   gap: 24px;
-  padding: 30px 0;
 }
-    .hero-text {
-  flex: 1 1 50%; /* text takes up half */
+
+.hero-text {
+  flex: 1; /* take remaining space */
+  max-width: 50%; /* optional: don't let text grow too wide */
 }
-    .hero-text p {
-      margin: 0 0 12px;
-      font-size: 1.25em; /* was 2em → reduced to 75% */
-    }
+
 .hero img {
-  width: 50%;
+  flex: 0 0 50%; /* image takes up half the section */
   height: auto;
   border-radius: 8px;
-  object-fit: contain; /* or "cover" if you prefer it to crop */
+  object-fit: cover;
 }
 
     /* SECTIONS */
