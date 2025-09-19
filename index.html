@@ -40,11 +40,11 @@
       color: #000;
       font-weight: 600;
       font-size: 20px;
-      border-bottom: 2px solid transparent; /* baseline */
+      border-bottom: 3px solid hotpink; /* always visible pink underline */
       padding-bottom: 4px;
     }
     .site-header nav a:hover {
-      border-bottom: 2px solid #000; /* underline on hover */
+      border-bottom: 3px solid #000; /* darker on hover */
     }
 
     /* HERO */
@@ -65,15 +65,16 @@
     .hero {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-start; /* anchor bio text to top of image */
       gap: 24px;
       padding: 30px 0;
     }
     .hero-text {
       flex: 1 1 400px;
     }
-    .hero p {
+    .hero-text p {
       margin: 0 0 12px;
+      font-size: 2em; /* double size */
     }
     .hero img {
       flex: 1 1 280px;
@@ -112,8 +113,7 @@
     }
     .carousel-item img {
       height: 337px;       /* consistent height */
-      width: auto;         /* flexible width */
-      max-width: 225px;    /* optional: keeps very wide covers in check */
+      width: auto;         /* keep original aspect ratio */
       border-radius: 6px;
       display: block;
       margin: 0 auto;
@@ -197,20 +197,17 @@
   <!-- HERO HEADING -->
   <div class="hero-heading container">
     <h1>Maria Camila Correa</h1>
-    <h3>Editor, Translator, Author</h3>
+    <h3>Editor. Translator. Author.</h3>
   </div>
 
   <!-- BIO -->
   <section id="bio" class="container hero">
     <div class="hero-text">
       <p>Hi. I'm a picture book editor, translator, and author. Originally from Medellín, Colombia, I currently live in New York City with my sexy husband. I enjoy exploring the city through my camera lens.</p>
+      <p><em>Below is a sample of the books I have edited, translated and written...</em></p>
     </div>
     <img src="images/portrait.jpg" alt="Maria Camila Correa">
   </section>
-
-  <div class="container">
-    <p><em>Below is a sample of the books I have edited, translated and written...</em></p>
-  </div>
 
   <!-- EDITOR -->
   <section id="editor" class="container">
@@ -257,7 +254,7 @@
 
   <!-- STAY IN TOUCH -->
   <div class="container" style="text-align:center; margin:60px 0 10px;">
-    <p><em>I hope you stay in touch.</em></p>
+    <p><em>I would love to hear from you.</em></p>
   </div>
 
   <!-- CONTACT -->
@@ -266,15 +263,15 @@
     <div class="contact-links">
       <div class="contact-item">
         <img src="images/email.png" alt="Email">
-        <a href="mailto:maria@example.com">maria@example.com</a>
+        <a href="mailto:mccorrea92@gmail.com">mccorrea92@gmail.com</a>
       </div>
       <div class="contact-item">
         <img src="images/linkedin.png" alt="LinkedIn">
-        <a href="https://www.linkedin.com/in/example" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/maria-camila-correa-6024813a/" target="_blank">maria-camila-correa-6024813a</a>
       </div>
       <div class="contact-item">
         <img src="images/instagram.png" alt="Instagram">
-        <a href="https://www.instagram.com/example" target="_blank">Instagram</a>
+        <a href="https://www.instagram.com/mccorrea64" target="_blank">@mccorrea64</a>
       </div>
     </div>
   </section>
