@@ -16,8 +16,8 @@
     }
 
     .container {
-      width: 90%;
-      max-width: 1000px;
+      width: 95%;
+      max-width: 1400px;
       margin: 0 auto;
     }
 
@@ -128,18 +128,27 @@
       flex: 0 0 auto;
       text-align: center;
     }
-    .carousel-item img {
-      height: 337px;       /* consistent height */
-      width: auto;         /* keep original aspect ratio */
-      border-radius: 6px;
-      display: block;
-      margin: 0 auto;
-    }
-    .carousel-item p {
-      margin: 6px 0 0;
-      font-size: 18px;
-      color: #333;
-    }
+
+
+
+.carousel-item img {
+  height: 337px;       /* consistent height */
+  width: auto;         /* keep original aspect ratio */
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.carousel-item p {
+  margin: 6px 0 0;
+  font-size: 18px;
+  color: #333;
+  width: 100%;           /* same width as image container */
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
     .carousel-btn {
       position: absolute;
       top: 50%;
@@ -244,27 +253,25 @@
       
 
 
-
+      <div class="carousel-item">
+  <a href="https://www.penguinrandomhouse.com/books/748759/alfie-explores-a-to-z-by-jeff-drew/" target="_blank">
+    <img src="images/alfie.jpg" alt="Alfie Explores A to Z"></a><p><em>Alfie Explores A to Z</em></p></div>
 
                  <div class="carousel-item">
   <a href="https://www.penguinrandomhouse.com/books/771325/floor-it-by-bex-tobin-fine-illustrated-by-federico-fabiani/" target="_blank">
     <img src="images/floor.jpg" alt="Floor It!"></a><p><em>Floor It!</em></p></div>
-
-<div class="carousel-item">
-  <a href="https://www.penguinrandomhouse.com/books/744522/dont-think-of-tigers-by-alex-latimer/" target="_blank">
-    <img src="images/tigers.jpg" alt="Don't Think of Tigers">  </a>  <p><em>Don't Think of Tigers</em></p></div>
 
                  <div class="carousel-item">
   <a href="https://www.penguinrandomhouse.com/books/740790/ritu-in-the-sun-by-moniza-hossain-illustrated-by-merce-lopez/" target="_blank">
     <img src="images/ritu.jpg" alt="Ritu in the Sun"></a><p><em>Ritu in the Sun</em></p></div>
       
       <div class="carousel-item">
-  <a href="https://www.penguinrandomhouse.com/books/748759/alfie-explores-a-to-z-by-jeff-drew/" target="_blank">
-    <img src="images/alfie.jpg" alt="Alfie Explores A to Z"></a><p><em>Alfie Explores A to Z</em></p></div>
-
-      <div class="carousel-item">
   <a href="https://www.penguinrandomhouse.com/books/779911/crouton-by-kristine-a-lombardi/" target="_blank">
     <img src="images/crouton.jpg" alt="Crouton"></a><p><em>Crouton</em></p></div>
+
+        <div class="carousel-item">
+  <a href="https://www.penguinrandomhouse.com/books/744522/dont-think-of-tigers-by-alex-latimer/" target="_blank">
+    <img src="images/tigers.jpg" alt="Don't Think of Tigers">  </a>  <p><em>Don't Think of Tigers</em></p></div>
 
               <div class="carousel-item">
   <a href="https://www.penguinrandomhouse.com/books/723700/somewhere-in-between-by-laan-cham/" target="_blank">
