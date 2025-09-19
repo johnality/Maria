@@ -73,25 +73,26 @@
       color: #444;
     }
 
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start; /* anchor bio text to top of image */
-      gap: 24px;
-      padding: 30px 0;
-    }
+ .hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* bio anchored to top of image */
+  gap: 24px;
+  padding: 30px 0;
+}
     .hero-text {
-      flex: 1 1 400px;
-    }
+  flex: 1 1 50%; /* text takes up half */
+}
     .hero-text p {
       margin: 0 0 12px;
       font-size: 1.25em; /* was 2em → reduced to 75% */
     }
-    .hero img {
-      flex: 1 1 280px;
-      max-width: 360px;
-      border-radius: 8px;
-    }
+.hero img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain; /* or "cover" if you prefer it to crop */
+}
 
     /* SECTIONS */
     section {
@@ -246,13 +247,18 @@
 
 
 
+                                      <div class="carousel-item">
+  <a href="https://www.penguinrandomhouse.com/books/553850/theres-a-monster-in-your-book-by-tom-fletcher-illustrated-by-greg-abbott/" target="_blank">
+    <img src="images/monster.jpg" alt="There's a Monster in Your Book"></a><p><em>There's a Monster in Your Book</em></p></div>
 
-      
 
-
-      <div class="carousel-item">
-  <a href="https://www.penguinrandomhouse.com/books/748759/alfie-explores-a-to-z-by-jeff-drew/" target="_blank">
-    <img src="images/alfie.jpg" alt="Alfie Explores A to Z"></a><p><em>Alfie Explores A to Z</em></p></div>
+          <div class="carousel-item">
+  <a href="https://www.penguinrandomhouse.com/books/706013/dr-seusss-how-the-grinch-lost-christmas-by-alastair-heim-illustrated-by-aristides-ruiz/" target="_blank">
+    <img src="images/grinch.jpg" alt="Dr. Seuss's How the Grinch Lost Christmas!"></a>    <p><em>Dr. Seuss's How the Grinch Lost Christmas!</em></p></div>
+        
+        <div class="carousel-item">
+  <a href="https://www.penguinrandomhouse.com/books/717822/hello-sun-by-lala-watkins/" target="_blank">
+    <img src="images/sun.jpg" alt="Hello, Sun!"></a><p><em>Hello, Sun!</em></p></div>
 
                  <div class="carousel-item">
   <a href="https://www.penguinrandomhouse.com/books/771325/floor-it-by-bex-tobin-fine-illustrated-by-federico-fabiani/" target="_blank">
@@ -261,7 +267,13 @@
                  <div class="carousel-item">
   <a href="https://www.penguinrandomhouse.com/books/740790/ritu-in-the-sun-by-moniza-hossain-illustrated-by-merce-lopez/" target="_blank">
     <img src="images/ritu.jpg" alt="Ritu in the Sun"></a><p><em>Ritu in the Sun</em></p></div>
-      
+
+        
+                
+      <div class="carousel-item">
+  <a href="https://www.penguinrandomhouse.com/books/748759/alfie-explores-a-to-z-by-jeff-drew/" target="_blank">
+    <img src="images/alfie.jpg" alt="Alfie Explores A to Z"></a><p><em>Alfie Explores A to Z</em></p></div>
+               
       <div class="carousel-item">
   <a href="https://www.penguinrandomhouse.com/books/779911/crouton-by-kristine-a-lombardi/" target="_blank">
     <img src="images/crouton.jpg" alt="Crouton"></a><p><em>Crouton</em></p></div>
@@ -271,25 +283,21 @@
     <img src="images/tigers.jpg" alt="Don't Think of Tigers">  </a>  <p><em>Don't Think of Tigers</em></p></div>
 
               <div class="carousel-item">
-  <a href="https://www.penguinrandomhouse.com/books/723700/somewhere-in-between-by-laan-cham/" target="_blank">
-    <img src="images/somewhere.jpg" alt="Somewhere In Between"></a><p><em>Somewhere In Between</em></p></div>
-
+  <a href="https://www.penguinrandomhouse.com/books/752346/gray-squirrel-loses-it-by-cassandra-federman/" target="_blank">
+    <img src="images/squirrel.jpg" alt="Gray Squirrel Loses It!"></a><p><em>Gray Squirrel Loses It!</em></p></div>
+        
           <div class="carousel-item">
   <a href="https://www.penguinrandomhouse.com/books/724056/not-like-every-day-by-stephanie-vw-lucianovic-illustrated-by-gabrielle-grimard/" target="_blank">
     <img src="images/not.jpg" alt="Not Like Every Day"></a>    <p><em>Not Like Every Day</em></p></div>
 
-      <div class="carousel-item">
-  <a href="https://www.penguinrandomhouse.com/books/752346/gray-squirrel-loses-it-by-cassandra-federman/" target="_blank">
-    <img src="images/squirrel.jpg" alt="Gray Squirrel Loses It!"></a><p><em>Gray Squirrel Loses It!</em></p></div>
-      
+              <div class="carousel-item">
+  <a href="https://www.penguinrandomhouse.com/books/723700/somewhere-in-between-by-laan-cham/" target="_blank">
+    <img src="images/somewhere.jpg" alt="Somewhere In Between"></a><p><em>Somewhere In Between</em></p></div>
+
+        
       <div class="carousel-item">
   <a href="https://www.penguinrandomhouse.com/books/736439/mao-maos-perfectly-imperfect-day-by-laan-cham/" target="_blank">
     <img src="images/mao.jpg" alt="Mao Mao's Perfectly Imperfect Day"></a><p><em>Mao Mao's Perfectly Imperfect Day</em></p></div>
-
-          <div class="carousel-item">
-  <a href="https://www.penguinrandomhouse.com/books/706013/dr-seusss-how-the-grinch-lost-christmas-by-alastair-heim-illustrated-by-aristides-ruiz/" target="_blank">
-    <img src="images/grinch.jpg" alt="Dr. Seuss's How the Grinch Lost Christmas!"></a>    <p><em>Dr. Seuss's How the Grinch Lost Christmas!</em></p></div>
-
         
   <div class="carousel-item">
   <a href="https://www.penguinrandomhouse.com/books/714785/dr-seusss-horton-hears-a-boo-by-wade-bradford-illustrated-by-tom-brannon/" target="_blank">
@@ -320,9 +328,6 @@
   <a href="https://www.penguinrandomhouse.com/books/608357/sleep-little-dozer-by-diana-murray-illustrated-by-cleonique-hilsaca/" target="_blank">
     <img src="images/dozer.jpg" alt="Sleep, Little Dozer"></a><p><em>Sleep, Little Dozer</em></p></div>
 
-        <div class="carousel-item">
-  <a href="https://www.penguinrandomhouse.com/books/717822/hello-sun-by-lala-watkins/" target="_blank">
-    <img src="images/sun.jpg" alt="Hello, Sun!"></a><p><em>Hello, Sun!</em></p></div>
 
                 <div class="carousel-item">
   <a href="https://www.penguinrandomhouse.com/books/718553/gertrude-gish-on-a-dish-on-a-fish-by-sarah-hwang/" target="_blank">
@@ -343,10 +348,6 @@
                       <div class="carousel-item">
   <a href="https://www.penguinrandomhouse.com/books/606265/rocket-says-look-up-by-nathan-bryon-illustrated-by-dapo-adeola/" target="_blank">
     <img src="images/rocketlook.jpg" alt="Rocket Says Look Up!"></a><p><em>Rocket Says Look Up!</em></p></div>
-
-                                      <div class="carousel-item">
-  <a href="https://www.penguinrandomhouse.com/books/553850/theres-a-monster-in-your-book-by-tom-fletcher-illustrated-by-greg-abbott/" target="_blank">
-    <img src="images/monster.jpg" alt="There's a Monster in Your Book"></a><p><em>There's a Monster in Your Book</em></p></div>
 
                                               <div class="carousel-item">
   <a href="https://www.penguinrandomhouse.com/books/797896/theres-a-bunny-in-your-book-by-tom-fletcher/" target="_blank">
