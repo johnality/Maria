@@ -1,262 +1,250 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maria Camila Correa</title>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-<style>
-body {
-  margin: 0;
-  font-family: 'Lexend', sans-serif;
-  line-height: 1.6;
-  color: #111;
-  background: #eaf6fb;
-}
-
-.container {
-  width: 95%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-/* HEADER */
-.site-header {
-  background: #eaf6fb;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.site-header nav {
-  display: flex;
-  gap: 22px;
-  padding: 12px 0;
-  justify-content: center;
-}
-
-.site-header nav a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 600;
-  font-size: 20px;
-  position: relative;
-  padding-bottom: 6px;
-}
-
-.site-header nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 6px;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 3 Q 10 0, 20 3 T 40 3 T 60 3' stroke='hotpink' stroke-width='3' fill='transparent'/%3E%3C/svg%3E") repeat-x;
-  background-size: 60px 6px;
-}
-
-.site-header nav a:hover::after {
-  background: url("data:image/svg+xml,%3Csvg width='60' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 3 Q 10 0, 20 3 T 40 3 T 60 3' stroke='black' stroke-width='3' fill='transparent'/%3E%3C/svg%3E") repeat-x;
-  background-size: 60px 6px;
-}
-
-/* HERO HEADING */
-.hero-heading {
-  text-align: center;
-  padding: 20px 0 10px;
-}
-
-.hero-heading h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: clamp(48px, 7vw, 72px);
-  margin: 0;
-}
-
-.hero-heading h3 {
-  margin: 10px 0 0;
-  font-size: 30px;
-  color: #444;
-}
-
-/* BIO SECTION */
-.hero {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-}
-
-.hero-text {
-  flex: 1;
-}
-
-.hero-text p {
-  font-size: 22px;
-  line-height: 1.7;
-}
-
-.hero img {
-  flex: 0 0 40%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  border: none;
-  outline: none;
-  box-shadow: none;
-}
-
-/* SECTIONS */
-section {
-  padding: 40px 0;
-}
-
-section h2 {
-  font-size: 32px;
-  margin-bottom: 16px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 6px;
-  text-align: center;
-}
-
-/* CAROUSEL */
-.carousel-wrapper {
-  position: relative;
-  overflow: hidden;
-  margin-top: 16px;
-}
-
-.carousel {
-  display: flex;
-  gap: 16px;
-  scroll-behavior: smooth;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.carousel::-webkit-scrollbar { display: none; }
-
-.carousel-item {
-  flex: 0 0 auto;
-  text-align: center;
-}
-
-.carousel-item img {
-  height: 337px;
-  width: auto;
-  border-radius: 6px;
-  display: block;
-  margin: 0 auto;
-}
-
-.carousel-item p {
-  margin: 6px auto 0;
-  font-size: 18px;
-  color: #333;
-  max-width: 337px;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255,255,255,0.8);
-  border: none;
-  font-size: 32px;
-  cursor: pointer;
-  padding: 4px 10px;
-  border-radius: 4px;
-  z-index: 5;
-}
-
-.carousel-btn.left { left: 4px; }
-.carousel-btn.right { right: 4px; }
-
-/* FOOTER */
-footer {
-  border-top: 1px solid #ccc;
-  text-align: center;
-  padding: 18px 0;
-  font-size: 16px;
-  color: #555;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-  .hero {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero img {
-    width: 100%;
-    max-width: 420px;
-  }
-
-  .hero-text {
-    max-width: 100%;
-  }
-
-  .hero-text p {
-    font-size: 20px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<header class="site-header">
-<nav>
-<a href="#bio-heading">BIO</a>
-<a href="#editor">EDITOR</a>
-<a href="#translator">TRANSLATOR</a>
-<a href="#author">AUTHOR</a>
-</nav>
-</header>
-
-<main>
-
-<div class="hero-heading container" id="bio-heading">
-<h1>Maria Camila Correa</h1>
-<h3>Editor. Translator. Author.</h3>
-</div>
-
-<section id="bio" class="container hero">
-<div class="hero-text">
-<p>Hi. I'm a picture book editor, translator, and author. Originally from Medellín, Colombia, I currently live in New York City. I enjoy exploring the city through my camera lens.</p>
-<p><em>Below is a sample of the books I have edited, translated and written...</em></p>
-</div>
-<img src="images/portrait.jpg" alt="Maria Camila Correa">
-</section>
-
-</main>
-
-<footer>
-<p>© 2025 Maria Camila Correa</p>
-</footer>
-
-<script>
-document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
-  const carousel = wrapper.querySelector('.carousel');
-  const leftBtn = wrapper.querySelector('.carousel-btn.left');
-  const rightBtn = wrapper.querySelector('.carousel-btn.right');
-  if (!carousel || !leftBtn || !rightBtn) return;
-  function scrollAmount() {
-    const item = carousel.querySelector('.carousel-item');
-    return item ? item.offsetWidth + 16 : 300;
-  }
-  leftBtn.addEventListener('click', () => {
-    carousel.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
-  });
-  rightBtn.addEventListener('click', () => {
-    carousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
-  });
-});
-</script>
-
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Maria Camila Correa</title>
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+      <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+      <style> body { margin: 0; font-family: 'Lexend', sans-serif; line-height: 1.6; color: #111; background: #eaf6fb; } .container { width: 95%; max-width: 1400px; margin: 0 auto; } /* HEADER */ .site-header { border-bottom: none; background: #eaf6fb; position: sticky; top: 0; z-index: 1000; } .site-header nav { display: flex; gap: 22px; padding: 12px 0; justify-content: center; } .site-header nav a { text-decoration: none; color: #000; font-weight: 600; font-size: 20px; position: relative; padding-bottom: 6px; } .site-header nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: url("data:image/svg+xml,%3Csvg width='60' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 3 Q 10 0, 20 3 T 40 3 T 60 3' stroke='hotpink' stroke-width='3' fill='transparent'/%3E%3C/svg%3E") repeat-x; background-size: 60px 6px; } .site-header nav a:hover::after { background: url("data:image/svg+xml,%3Csvg width='60' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 3 Q 10 0, 20 3 T 40 3 T 60 3' stroke='black' stroke-width='3' fill='transparent'/%3E%3C/svg%3E") repeat-x; background-size: 60px 6px; } /* HERO */ .hero-heading { text-align: center; padding: 20px 0 10px; } .hero-heading h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: clamp(48px, 7vw, 72px); margin: 0; } .hero-heading h3 { margin: 10px 0 0; font-size: 30px; color: #444; } .hero { display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 24px; } .hero-text { flex: 1; max-width: 50%; } .hero img { flex: 0 0 37.5%; /* 75% of previous 50% */ height: auto; border-radius: 8px; object-fit: cover; } /* SECTIONS */ section { padding: 40px 0; } section h2 { font-size: 32px; margin-bottom: 16px; border-bottom: 1px solid #ccc; padding-bottom: 6px; } /* CAROUSEL */ #editor h2, #translator h2, #author h2 { text-align: center; } .carousel-wrapper { position: relative; overflow: hidden; margin-top: 16px; } .carousel { display: flex; gap: 16px; scroll-behavior: smooth; overflow-x: auto; scrollbar-width: none; } .carousel::-webkit-scrollbar { display: none; } .carousel-item { flex: 0 0 auto; text-align: center; } .carousel-item img { height: 337px; width: auto; border-radius: 6px; display: block; margin: 0 auto; } .carousel-item p { margin: 6px auto 0; font-size: 18px; color: #333; max-width: 337px; /* match image height width constraint */ word-wrap: break-word; overflow-wrap: break-word; } .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; font-size: 32px; cursor: pointer; padding: 4px 10px; border-radius: 4px; z-index: 5; } .carousel-btn.left { left: 4px; } .carousel-btn.right { right: 4px; } /* FOOTER */ footer { border-top: 1px solid #ccc; text-align: center; padding: 18px 0; font-size: 16px; color: #555; } </style>
+   </head>
+   <body>
+      <header class="site-header">
+         <nav> <a href="#bio-heading">BIO</a> <a href="#editor">EDITOR</a> <a href="#translator">TRANSLATOR</a> <a href="#author">AUTHOR</a> <a href="#press">PRESS</a> </nav>
+      </header>
+      <main>
+         <!-- HERO HEADING --> 
+         <div class="hero-heading container" id="bio-heading">
+            <h1>Maria Camila Correa</h1>
+            <h3>Editor. Translator. Author.</h3>
+         </div>
+         <!-- BIO --> 
+         <section id="bio" class="container hero">
+            <div id="bio-top" class="hero-text">
+               <p>Hi. I'm a picture book editor, translator, and author. Originally from Medellín, Colombia, I currently live in New York City with my sexy husband. I enjoy exploring the city through my camera lens.</p>
+               <p><em>Below is a sample of the books I have edited, translated and written...</em></p>
+            </div>
+            <img src="images/portrait.jpg" alt="Maria Camila Correa"> 
+         </section>
+         <!-- EDITOR --> 
+         <section id="editor" class="container">
+            <h2>Editor of</h2>
+            <div class="carousel-wrapper">
+               <button class="carousel-btn left">&#10094;</button> 
+               <div class="carousel">
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/779911/crouton-by-kristine-a-lombardi/" target="_blank"> <img src="images/crouton.jpg" alt="Crouton"></a>
+                     <p><em>Crouton</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/771325/floor-it-by-bex-tobin-fine-illustrated-by-federico-fabiani/" target="_blank"> <img src="images/floor.jpg" alt="Floor It!"></a>
+                     <p><em>Floor It!</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/740790/ritu-in-the-sun-by-moniza-hossain-illustrated-by-merce-lopez/" target="_blank"> <img src="images/ritu.jpg" alt="Ritu in the Sun"></a>
+                     <p><em>Ritu in the Sun</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/717822/hello-sun-by-lala-watkins/" target="_blank"> <img src="images/sun.jpg" alt="Hello, Sun!"></a>
+                     <p><em>Hello, Sun!</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/706013/dr-seusss-how-the-grinch-lost-christmas-by-alastair-heim-illustrated-by-aristides-ruiz/" target="_blank"> <img src="images/grinch.jpg" alt="Dr. Seuss's How the Grinch Lost Christmas!"></a> 
+                     <p><em>Dr. Seuss's<br>How the Grinch Lost Christmas!</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/748759/alfie-explores-a-to-z-by-jeff-drew/" target="_blank"> <img src="images/alfie.jpg" alt="Alfie Explores A to Z"></a>
+                     <p><em>Alfie Explores A to Z</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/744522/dont-think-of-tigers-by-alex-latimer/" target="_blank"> <img src="images/tigers.jpg" alt="Don't Think of Tigers"> </a> 
+                     <p><em>Don't Think of Tigers</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/752346/gray-squirrel-loses-it-by-cassandra-federman/" target="_blank"> <img src="images/squirrel.jpg" alt="Gray Squirrel Loses It!"></a>
+                     <p><em>Gray Squirrel Loses It!</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/724056/not-like-every-day-by-stephanie-vw-lucianovic-illustrated-by-gabrielle-grimard/" target="_blank"> <img src="images/not.jpg" alt="Not Like Every Day"></a> 
+                     <p><em>Not Like Every Day</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/723700/somewhere-in-between-by-laan-cham/" target="_blank"> <img src="images/somewhere.jpg" alt="Somewhere In Between"></a>
+                     <p><em>Somewhere In Between</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/736439/mao-maos-perfectly-imperfect-day-by-laan-cham/" target="_blank"> <img src="images/mao.jpg" alt="Mao Mao's Perfectly Imperfect Day"></a>
+                     <p><em>Mao Mao's Perfectly Imperfect Day</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/714785/dr-seusss-horton-hears-a-boo-by-wade-bradford-illustrated-by-tom-brannon/" target="_blank"> <img src="images/horton.jpg" alt="Dr. Seuss's Horton Hears a Boo!"></a> 
+                     <p><em>Dr. Seuss's Horton Hears a Boo!</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/709565/lets-celebrate-korean-new-year-by-michelle-w-park-illustrated-by-hyewon-yum/" target="_blank"> <img src="images/korean.jpg" alt="Let's Celebrate Korean New Year!"></a>
+                     <p><em>Let's Celebrate Korean New Year!</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/768688/spooky-scary-skeletons-by-andrew-gold-illustrated-by-polona-lovsin/" target="_blank"> <img src="images/spooky.jpg" alt="Spooky, Scary Skeletons"></a>
+                     <p><em>Spooky, Scary Skeletons</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/706022/pocket-full-of-sads-by-brad-davidson-illustrated-by-rachel-mas-davidson/" target="_blank"> <img src="images/pocket.jpg" alt="Pocket Full of Sads"></a>
+                     <p><em>Pocket Full of Sads</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/696795/whos-hiding-on-the-farm-by-amelia-hepworth/" target="_blank"> <img src="images/farm.jpg" alt="Who's Hiding on the Farm?"></a>
+                     <p><em>Who's Hiding on the Farm?</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/671442/our-classroom-rules-by-kallie-george-illustrated-by-jay-fleck/" target="_blank"> <img src="images/classroom.jpg" alt="Our Classroom Rules!"></a>
+                     <p><em>Our Classroom Rules!</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/608357/sleep-little-dozer-by-diana-murray-illustrated-by-cleonique-hilsaca/" target="_blank"> <img src="images/dozer.jpg" alt="Sleep, Little Dozer"></a>
+                     <p><em>Sleep, Little Dozer</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/718553/gertrude-gish-on-a-dish-on-a-fish-by-sarah-hwang/" target="_blank"> <img src="images/gertrude.jpg" alt="Gertrude Gish on a Dish on a Fish"></a>
+                     <p><em>Gertrude Gish<br>on a Dish on a Fish</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/718556/momo-sees-the-sea-by-avani-dwivedi/" target="_blank"> <img src="images/momo.jpg" alt="Momo Sees the Sea"></a>
+                     <p><em>Momo Sees the Sea</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/678082/rocket-says-speak-up-by-nathan-bryon-illustrated-by-dapo-adeola/" target="_blank"> <img src="images/rocketspeak.jpg" alt="Rocket Says Speak Up!"></a>
+                     <p><em>Rocket Says Speak Up!</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/608355/rocket-says-clean-up-by-nathan-bryon-illustratd-by-dapo-adeola/" target="_blank"> <img src="images/rocketclean.jpg" alt="Rocket Says Clean Up!"></a>
+                     <p><em>Rocket Says Clean Up!</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/606265/rocket-says-look-up-by-nathan-bryon-illustrated-by-dapo-adeola/" target="_blank"> <img src="images/rocketlook.jpg" alt="Rocket Says Look Up!"></a>
+                     <p><em>Rocket Says Look Up!</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/553850/theres-a-monster-in-your-book-by-tom-fletcher-illustrated-by-greg-abbott/" target="_blank"> <img src="images/monster.jpg" alt="There's a Monster in Your Book"></a>
+                     <p><em>There's a Monster in Your Book</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/797896/theres-a-bunny-in-your-book-by-tom-fletcher/" target="_blank"> <img src="images/bunny.jpg" alt="There's a Bunny in Your Book"></a>
+                     <p><em>There's a Bunny in Your Book</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/774577/theres-a-dinosaur-in-your-book-by-tom-fletcher/" target="_blank"> <img src="images/dino.jpg" alt="There's a Dinosaur in Your Book"></a>
+                     <p><em>There's a Dinosaur in Your Book</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/723932/theres-a-bear-in-your-book-by-tom-fletcher/" target="_blank"> <img src="images/bear.jpg" alt="There's a Bear in Your Book"></a>
+                     <p><em>There's a Bear in Your Book</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/743009/theres-a-little-chick-in-your-book-by-tom-fletcher/" target="_blank"> <img src="images/chick.jpg" alt="There's a Little Chick in Your Book"></a>
+                     <p><em>There's a Little Chick in Your Book</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/616954/theres-a-witch-in-your-book-by-tom-fletcher-illustrated-by-greg-abbott/" target="_blank"> <img src="images/witch.jpg" alt="There's a Witch in Your Book"></a>
+                     <p><em>There's a Witch in Your Book</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/690086/theres-a-unicorn-in-your-book-by-tom-fletcher-illustrated-by-greg-abbott/" target="_blank"> <img src="images/unicorn.jpg" alt="There's a Unicorn in Your Book"></a>
+                     <p><em>There's a Unicorn in Your Book</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/605821/theres-an-elf-in-your-book-by-tom-fletcher-illustrated-by-greg-abbott/" target="_blank"> <img src="images/elf.jpg" alt="There's an Elf in Your Book"></a>
+                     <p><em>There's an Elf in Your Book</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/616755/theres-an-alien-in-your-book-by-tom-fletcher-illustrated-by-greg-abbott/" target="_blank"> <img src="images/alien.jpg" alt="There's an Alien in Your Book"></a>
+                     <p><em>There's an Alien in Your Book</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/555259/theres-a-dragon-in-your-book-by-tom-fletcher-illustrated-by-greg-abbott/" target="_blank"> <img src="images/dragon.jpg" alt="There's a Dragon in Your Book"></a>
+                     <p><em>There's a Dragon in Your Book</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/768933/theres-a-little-snowman-in-your-book-by-tom-fletcher/" target="_blank"> <img src="images/snow.jpg" alt="There's a Little Snowman in Your Book"></a>
+                     <p><em>There's a Little Snowman in Your Book</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/652025/theres-a-superhero-in-your-book-by-tom-fletcher-illustrated-by-greg-abbott/" target="_blank"> <img src="images/superhero.jpg" alt="There's a Superhero in Your Book"></a>
+                     <p><em>There's a Superhero in Your Book</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/788067/theres-a-little-ghost-in-your-book-by-tom-fletcher/" target="_blank"> <img src="images/ghost.jpg" alt="There's a Little Ghost in Your Book"></a>
+                     <p><em>There's a Little Ghost in Your Book</em></p>
+                  </div>
+               </div>
+               <button class="carousel-btn right">&#10095;</button> 
+            </div>
+         </section>
+         <!-- TRANSLATOR --> 
+         <section id="translator" class="container">
+            <h2>Translator of</h2>
+            <div class="carousel-wrapper">
+               <button class="carousel-btn left">&#10094;</button> 
+               <div class="carousel">
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/711798/mi-hermano-esta-lejos-my-brother-is-away-spanish-edition-by-sara-greenwood-illustrated-by-luisa-uribe-translated-by-maria-correa/" target="_blank"> <img src="images/hermano.jpg" alt="Mi hermano está lejos (My Brother is Away)"> </a> 
+                     <p><em>Mi hermano está lejos<br>(My Brother is Away)</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/752473/tamales-para-navidad-tamales-for-christmas-spanish-edition-by-stephen-briseno-illustrated-by-sonia-sanchez-translated-by-maria-camila-correa/" target="_blank"> <img src="images/tamales.jpg" alt="Tamales para Navidad (Tamales for Christmas)"> </a> 
+                     <p><em>Tamales para Navidad<br>(Tamales for Christmas)</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/737885/un-plato-de-esperanza-a-plate-of-hope-spanish-edition-by-erin-frankel-illustrated-by-paola-escobar/" target="_blank"> <img src="images/plato.jpg" alt="Un plato de esperanza (A Plate of Hope)"> </a> 
+                     <p><em>Un plato de esperanza<br>(A Plate of Hope)</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/756677/mi-little-golden-book-sobre-taylor-swift-my-little-golden-book-about-taylor-swift-spanish-edition-by-wendy-loggia-illustrated-by-elisa-chavarri-translated-by-maria-correa/" target="_blank"> <img src="images/taylor.jpg" alt="Mi Little Golden Book sobre Taylor Swift"> </a> 
+                     <p><em>Mi Little Golden Book<br>sobre Taylor Swift</em></p>
+                  </div>
+               </div>
+               <button class="carousel-btn right">&#10095;</button> 
+            </div>
+         </section>
+         <!-- AUTHOR --> 
+         <section id="author" class="container">
+            <h2>Author of</h2>
+            <div class="carousel-wrapper">
+               <button class="carousel-btn left">&#10094;</button> 
+               <div class="carousel">
+                  <div class="carousel-item">
+                     <a href="https://www.amazon.com/Follow-Me-Little-Fox-Journey/dp/1680101285" target="_blank"> <img src="images/fox.jpg" alt="Follow Me Little Fox"></a> 
+                     <p><em>Follow Me Little Fox</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.amazon.com/-/es/Noahs-Noisy-Night-Maria-Correa/dp/1788813081/" target="_blank"> <img src="images/noah.jpg" alt="Noah's Noisy Night"></a> 
+                     <p><em>Noah's Noisy Night</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/704146/spanish-is-my-superpower-sesame-street-by-maria-correa-illustrated-by-shane-clester/" target="_blank"> <img src="images/super.jpg" alt="Spanish Is My Superpower"></a> 
+                     <p><em>Spanish Is My Superpower</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/743967/mi-little-golden-book-sobre-selena-my-little-golden-book-about-selena-spanish-edition-by-maria-correa-illustrated-by-paula-zamudio/" target="_blank"> <img src="images/selena.jpg" alt="Mi Little Golden Book sobre Selena"></a> 
+                     <p><em>Mi Little Golden Book<br>sobre Selena</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/726220/mi-little-golden-book-sobre-rita-moreno-rita-moreno-a-little-golden-book-biography-spanish-edition-by-maria-correa-illustrated-by-maine-diaz/" target="_blank"> <img src="images/rita.jpg" alt="Mi Little Golden Book sobre Rita Moreno"></a> 
+                     <p><em>Mi Little Golden Book sobre Rita Moreno</em></p>
+                  </div>
+                  <div class="carousel-item">
+                     <a href="https://www.penguinrandomhouse.com/books/710004/bob-ross-a-little-golden-book-biography-by-maria-correa-illustrated-by-jeff-crowther/" target="_blank"> <img src="images/bobross.jpg" alt="Bob Ross: A Little Golden Book Biography"></a> 
+                     <p><em>Bob Ross:<br>A Little Golden Book Biography</em></p>
+                  </div>
+               </div>
+               <button class="carousel-btn right">&#10095;</button> 
+            </div>
+         </section>
+      </main>
+      <footer>
+         <p>© 2025 Maria Camila Correa</p>
+      </footer>
+      <script> document.querySelectorAll('.carousel-wrapper').forEach(wrapper => { const carousel = wrapper.querySelector('.carousel'); const leftBtn = wrapper.querySelector('.carousel-btn.left'); const rightBtn = wrapper.querySelector('.carousel-btn.right'); if (!carousel || !leftBtn || !rightBtn) return; function scrollAmount() { const item = carousel.querySelector('.carousel-item'); return item ? item.offsetWidth + 16 : 300; } leftBtn.addEventListener('click', () => { carousel.scrollBy({ left: -scrollAmount(), behavior: 'smooth' }); }); rightBtn.addEventListener('click', () => { carousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' }); }); }); </script> 
+   </body>
 </html>
