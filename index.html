@@ -7,7 +7,50 @@
       <link rel="icon" href="favicon.ico" type="image/x-icon">
       <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-      <style> body { margin: 0; font-family: 'Lexend', sans-serif; line-height: 1.6; color: #111; background: #eaf6fb; } .container { width: 95%; max-width: 1400px; margin: 0 auto; } /* HEADER */ .site-header { border-bottom: none; background: #eaf6fb; position: sticky; top: 0; z-index: 1000; } .site-header nav { display: flex; gap: 22px; padding: 12px 0; justify-content: center; } .site-header nav a { text-decoration: none; color: #000; font-weight: 600; font-size: 20px; position: relative; padding-bottom: 6px; } .site-header nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: url("data:image/svg+xml,%3Csvg width='60' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 3 Q 10 0, 20 3 T 40 3 T 60 3' stroke='hotpink' stroke-width='3' fill='transparent'/%3E%3C/svg%3E") repeat-x; background-size: 60px 6px; } .site-header nav a:hover::after { background: url("data:image/svg+xml,%3Csvg width='60' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 3 Q 10 0, 20 3 T 40 3 T 60 3' stroke='black' stroke-width='3' fill='transparent'/%3E%3C/svg%3E") repeat-x; background-size: 60px 6px; } /* HERO */ .hero-heading { text-align: center; padding: 20px 0 10px; } .hero-heading h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: clamp(48px, 7vw, 72px); margin: 0; } .hero-heading h3 { margin: 10px 0 0; font-size: 30px; color: #444; } .hero { display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 24px; } .hero-text { flex: 1; max-width: 50%; } .hero img { flex: 0 0 37.5%; /* 75% of previous 50% */ height: auto; border-radius: 8px; object-fit: cover; } /* SECTIONS */ section { padding: 40px 0; } section h2 { font-size: 32px; margin-bottom: 16px; border-bottom: 1px solid #ccc; padding-bottom: 6px; } /* CAROUSEL */ #editor h2, #translator h2, #author h2 { text-align: center; } .carousel-wrapper { position: relative; overflow: hidden; margin-top: 16px; } .carousel { display: flex; gap: 16px; scroll-behavior: smooth; overflow-x: auto; scrollbar-width: none; } .carousel::-webkit-scrollbar { display: none; } .carousel-item { flex: 0 0 auto; text-align: center; } .carousel-item img { height: 337px; width: auto; border-radius: 6px; display: block; margin: 0 auto; } .carousel-item p { margin: 6px auto 0; font-size: 18px; color: #333; max-width: 337px; /* match image height width constraint */ word-wrap: break-word; overflow-wrap: break-word; } .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; font-size: 32px; cursor: pointer; padding: 4px 10px; border-radius: 4px; z-index: 5; } .carousel-btn.left { left: 4px; } .carousel-btn.right { right: 4px; } /* FOOTER */ footer { border-top: 1px solid #ccc; text-align: center; padding: 18px 0; font-size: 16px; color: #555; } </style>
+      <style> body { margin: 0; font-family: 'Lexend', sans-serif; line-height: 1.6; color: #111; background: #eaf6fb; } .container { width: 95%; max-width: 1400px; margin: 0 auto; } /* HEADER */ .site-header { border-bottom: none; background: #eaf6fb; position: sticky; top: 0; z-index: 1000; } .site-header nav { display: flex; gap: 22px; padding: 12px 0; justify-content: center; } .site-header nav a { text-decoration: none; color: #000; font-weight: 600; font-size: 20px; position: relative; padding-bottom: 6px; } .site-header nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: url("data:image/svg+xml,%3Csvg width='60' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 3 Q 10 0, 20 3 T 40 3 T 60 3' stroke='hotpink' stroke-width='3' fill='transparent'/%3E%3C/svg%3E") repeat-x; background-size: 60px 6px; } .site-header nav a:hover::after { background: url("data:image/svg+xml,%3Csvg width='60' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 3 Q 10 0, 20 3 T 40 3 T 60 3' stroke='black' stroke-width='3' fill='transparent'/%3E%3C/svg%3E") repeat-x; background-size: 60px 6px; } /* HERO */ .hero-heading { text-align: center; padding: 20px 0 10px; } .hero-heading h1 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: clamp(48px, 7vw, 72px); margin: 0; } .hero-heading h3 { margin: 10px 0 0; font-size: 30px; color: #444; } .hero { display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 24px; } 
+         
+.hero-text p {
+    font-size: 30px;
+}         
+         
+.hero img { 
+flex: 0 0 37.5%;
+height: auto;
+border-radius: 8px;
+object-fit: cover;
+border: none;
+outline: none;
+}         
+         
+         
+         
+         /* SECTIONS */ section { padding: 40px 0; } section h2 { font-size: 32px; margin-bottom: 16px; border-bottom: 1px solid #ccc; padding-bottom: 6px; } /* CAROUSEL */ #editor h2, #translator h2, #author h2 { text-align: center; } .carousel-wrapper { position: relative; overflow: hidden; margin-top: 16px; } .carousel { display: flex; gap: 16px; scroll-behavior: smooth; overflow-x: auto; scrollbar-width: none; } .carousel::-webkit-scrollbar { display: none; } .carousel-item { flex: 0 0 auto; text-align: center; } .carousel-item img { height: 337px; width: auto; border-radius: 6px; display: block; margin: 0 auto; } .carousel-item p { margin: 6px auto 0; font-size: 18px; color: #333; max-width: 337px; /* match image height width constraint */ word-wrap: break-word; overflow-wrap: break-word; } .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; font-size: 32px; cursor: pointer; padding: 4px 10px; border-radius: 4px; z-index: 5; } .carousel-btn.left { left: 4px; } .carousel-btn.right { right: 4px; } /* FOOTER */ footer { border-top: 1px solid #ccc; text-align: center; padding: 18px 0; font-size: 16px; color: #555; } 
+
+
+         @media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero img {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .hero-text p {
+    font-size: 22px;
+  }
+
+}
+      
+      </style>
    </head>
    <body>
       <header class="site-header">
